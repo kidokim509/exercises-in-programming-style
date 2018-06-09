@@ -87,10 +87,10 @@ while True:
 							break
 					if not data[4]:
 						word_freqs.seek(0, 1) # 윈도우에서는 필요하다
-						word_freqs.writelines("%20s, %04d\n" % (data[5], 1))
+						word_freqs.writelines("%20s,%04d\n" % (data[5], 1))
 					else:
 						word_freqs.seek(-26, 1)
-						word_freqs.writelines("%20s, %04d\n" % (data[5], data[7]))
+						word_freqs.writelines("%20s,%04d\n" % (data[5], data[7]))
 					word_freqs.seek(0, 0)
 				# 초기화하자
 				data[2] = None
